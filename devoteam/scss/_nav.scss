@@ -1,0 +1,65 @@
+nav {
+	display: flex;
+	height: 50px;
+	width: 100%;
+	padding: 10px 10%;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+
+	&.active {
+		background-color: rgba(240, 240, 240, 0.5);
+	}
+
+	.menu {
+		display: block;
+		background-color: $black;
+		width: 26px;
+		height: 26px;
+		border-radius: 100%;
+		position: relative;
+
+		&::before {
+			content: "";
+			height: 2px;
+			width: 15px;
+			display: block;
+			background-color: #ffffff;
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+
+		&::after {
+			content: "";
+			height: 2px;
+			width: 15px;
+			display: block;
+			background-color: #ffffff;
+			position: absolute;
+			top: 15px;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	.name {
+		width: 24%;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	.account {
+		text-transform: uppercase;
+	}
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+	nav .name {
+		width: 50%;
+	}
+}
